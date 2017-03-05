@@ -1,0 +1,52 @@
+head
+	title MIKI
+	link(rel="stylesheet", href="css/style.css")
+	link(rel="stylesheet", href="css/animate.css")
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Droid+Serif|Josefin+Sans|Montserrat|Playfair+Display|Raleway")
+	link(rel="stylesheet", href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css")
+
+		
+body
+	header#header
+		p.menuitem#menumain MAIN
+		p.menuitem#menuabout ABOUT ME
+		p.menuitem#menustuff MY STUFF
+
+
+	.section#intro
+		.card.introcard
+			.column-right
+				p.title MICAEL ROBLES
+				h1.sub Front-end developer
+				a.buttonstyle#whoami ABOUT ME
+				a(href="#stuff").buttonstyle#checkitout CHECK OUT MY STUFF
+	.section#me
+		.card.mecard
+			p.title Hi, My name is <strong>Micael Robles.</strong>
+			p.title.imsub I'm a 19 years old dude from <i>Buenos Aires, Argentina.</i>
+			p.title.imsub I'm also a self-taugth web developer, currently hanging out in <a href="https://freecodecampba.org/"><i>FreeCodeCamp.</i></a>
+			p.title.imsub I like to challenge myself to do things that surprise people.
+			//p.title.imsub I can handle HTML5, CSS3, JavaScript, jQuery, Photoshop, Illustrator and some other useful stuff.
+		.card.me2card
+			p.title I can handle these things
+			.iconcontainer
+				i.devicon-html5-plain-wordmark
+				i.devicon-css3-plain-wordmark
+				i.devicon-javascript-plain
+				i.devicon-jquery-plain-wordmark
+				i.devicon-illustrator-line
+				i.devicon-photoshop-line
+				i.devicon-sass-original
+				i.devicon-bootstrap-plain-wordmark
+
+
+	.section#stuff
+		.card.stuffcard
+			p.title Here is some stuff I did
+			
+
+script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+script(src="js/pace.min.js")
+script(src="js/script.js")
+
+
