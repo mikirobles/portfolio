@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg4332" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" height="59.629mm" width="389.83mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" viewBox="0 0 1381.2893 211.28458" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs4334">
+  <filter id="filter4770" style="color-interpolation-filters:sRGB">
+   <feFlood id="feFlood4772" flood-opacity="0" flood-color="rgb(255,255,255)" result="result6"/>
+   <feColorMatrix id="feColorMatrix4774" values="0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 -1 0 0 1 0 " result="result3" in="SourceGraphic"/>
+   <feBlend id="feBlend4776" in="result3" mode="multiply" in2="result6" result="result7"/>
+   <feColorMatrix id="feColorMatrix4778" values="0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 -1 0 1 0 " result="result2" in="SourceGraphic"/>
+   <feBlend id="feBlend4780" mode="multiply" result="result4" in2="result7" in="result2"/>
+   <feColorMatrix id="feColorMatrix4782" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 -1 1 0 " result="result1" in="SourceGraphic"/>
+   <feBlend id="feBlend4784" in="result1" mode="multiply" in2="result4" result="result5"/>
+  </filter>
+  <linearGradient id="linearGradient5368" gradientTransform="translate(-177.14 1022.9)" osb:paint="solid">
+   <stop id="stop5370" stop-color="#920a3d" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient5380" gradientTransform="translate(-177.14 1022.9)" osb:paint="solid">
+   <stop id="stop5382" stop-color="#ff5900" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient5374" gradientTransform="translate(-177.14 1022.9)" osb:paint="solid">
+   <stop id="stop5376" stop-color="#c90034" offset="0"/>
+  </linearGradient>
+ </defs>
+ <metadata id="metadata4337">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" fill-rule="evenodd" transform="translate(-548.14 859.15)">
+  <g id="g4686" style="image-rendering:optimizeQuality" filter="url(#filter4770)">
+   <path id="path4698" d="m1835.4-838.37h-1097.2v133.82h1097.2z" points="738.14548,-838.37464 738.14548,-704.55731 1835.3733,-704.55731 1835.3733,-838.37464 " fill="#e9e9ff"/>
+   <path id="path4694" d="m684.3-796.12v133.82l53.847-42.253v-133.82z" points="684.29891,-662.30417 738.14548,-704.55731 738.14548,-838.37464 684.29891,-796.1215 " fill="#d7d7ff"/>
+   <path id="path4696" d="m1781.5-662.3h-1097.2l53.847-42.253h1097.2z" points="684.29891,-662.30417 738.14548,-704.55731 1835.3733,-704.55731 1781.5268,-662.30417 " fill="#afafde"/>
+   <path id="path4690" d="m1781.5-796.12h-1097.2l53.847-42.253h1097.2z" points="684.29891,-796.1215 738.14548,-838.37464 1835.3733,-838.37464 1781.5268,-796.1215 " fill="url(#linearGradient5380)"/>
+   <path id="path4688" d="m1781.5-796.12v133.82l53.846-42.253v-133.82z" points="1781.5268,-662.30417 1835.3733,-704.55731 1835.3733,-838.37464 1781.5268,-796.1215 " fill="url(#linearGradient5368)"/>
+   <path id="path4692" d="m1781.5-796.12h-1097.2v133.82h1097.2z" points="684.29891,-796.1215 684.29891,-662.30417 1781.5268,-662.30417 1781.5268,-796.1215 " fill="url(#linearGradient5374)"/>
+  </g>
+  <g id="g5504">
+   <path id="path5510" d="m1766.5-781.08 15-0.022-0.022-15-15 0.022z" points="1781.4968,-781.09735 1781.4747,-796.09734 1766.4748,-796.07531 1766.4968,-781.07532 " fill="#8686bf"/>
+   <path id="path5512" d="m1781.5-781.1-0.022-15 8.1685-6.4291 0.022 15z" points="1781.4747,-796.09734 1789.6432,-802.52647 1789.6652,-787.52649 1781.4968,-781.09735 " fill="#d7d7ff"/>
+   <path id="path5514" d="m1766.5-796.08 15-0.022 8.1685-6.4291-15 0.022z" points="1781.4747,-796.09734 1789.6432,-802.52647 1774.6432,-802.50445 1766.4748,-796.07531 " fill="#afafde"/>
+   <path id="path5508" d="m1766.5-781.08 15-0.022 8.1684-6.4291-15 0.022z" points="1781.4968,-781.09735 1789.6652,-787.52649 1774.6652,-787.50446 1766.4968,-781.07532 " fill="url(#linearGradient5380)"/>
+   <path id="path5506" d="m1766.5-781.08-0.022-15 8.1684-6.4291 0.022 15z" points="1766.4748,-796.07531 1774.6432,-802.50445 1774.6652,-787.50446 1766.4968,-781.07532 " fill="url(#linearGradient5368)"/>
+   <path id="path5516" d="m1774.7-787.5 15-0.022-0.022-15-15 0.022z" points="1789.6652,-787.52649 1789.6432,-802.52647 1774.6432,-802.50445 1774.6652,-787.50446 " fill="url(#linearGradient5374)"/>
+  </g>
+ </g>
+</svg>

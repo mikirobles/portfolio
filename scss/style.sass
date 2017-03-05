@@ -77,11 +77,51 @@ body
 		.column-right
 			display: flex
 			flex-direction: column
+			.sociallinks
+				display: flex
+				flex-direction: row
+				align-items: center
+				//align-self: flex-end
+				//margin-right: 40px
+				margin-left: 10px
+				font-size: 30px
+				margin-top: 15px
+				a
+					text-decoration: none
+					color: white
+					margin: 0 9px
+
+				#whatsapp:hover + .number
+					opacity: 1
+
+				.arrow
+					margin-left: -8px
+					width: 0
+					height: 0
+					border: 6px solid transparent
+					border-right: 6px solid white
+				.number
+					filter: drop-shadow(-2px 3px 0px #000)
+					transition: opacity 0.2s ease
+					opacity: 0
+					display: flex
+					flex-direction: row
+					align-items: center
+
+				p
+					background-color: white
+					color: #222222
+					font-family: Montserrat 
+					border: 1px solid white
+					padding: 5px
+					border-radius: 3px
+					font-size: 17px
 			a
 				//background-color: #820936
 				align-self: center
 			#whoami
-				margin-top: 170px
+				margin-top: 135px
+
 		.title
 			margin-top: 40px
 			margin-right: 40px
@@ -191,7 +231,16 @@ body
 			
 
 
-	.stuffcard
+	.stufftitle
+		p.title
+			font-family: Raleway
+		justify-content: center
+		padding-top: 14px
+		height: 200px
+		width: 900px
+		background: url("../img/bar.svg")
+		background-size: 900px
+		background-repeat: no-repeat
 
 
 #me 

@@ -1,6 +1,7 @@
 head
 	title MIKI
 	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+	<link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
 	link(rel="stylesheet", href="css/style.css")
 	link(rel="stylesheet", href="css/animate.css")
 	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Droid+Serif|Josefin+Sans|Montserrat|Playfair+Display|Raleway")
@@ -11,7 +12,7 @@ body
 	header#header
 		p.menuitem#menumain MAIN
 		p.menuitem#menuabout ABOUT ME
-		p.menuitem#menustuff MY STUFF
+		p.menuitem#menustuff THINGS
 
 
 	.section#intro
@@ -19,6 +20,15 @@ body
 			.column-right
 				p.title MICAEL ROBLES
 				h1.sub Front-end developer
+				.sociallinks
+					a.socicon-mail(href="mailto:micael.robles@gmail.com")
+					a.socicon-github(href="https://github.com/erosilk", target="_blank")
+					a.socicon-twitter(href="https://www.twitter.com/microbles", target="_blank")
+					a.socicon-facebook(href="https://github.com/erosilk", target="_blank")
+					a.socicon-whatsapp#whatsapp
+					.number
+						.arrow
+						p +54 911 4419-7071
 				a.buttonstyle#whoami ABOUT ME
 				a(href="#stuff").buttonstyle#checkitout CHECK OUT MY STUFF
 	.section#me
@@ -42,8 +52,8 @@ body
 
 
 	.section#stuff
-		.card.stuffcard
-			p.title Here is some stuff I did
+		.card.stufftitle
+			p.title Here is some things I did:
 			
 
 script(src="https://code.jquery.com/jquery-3.1.1.min.js")
