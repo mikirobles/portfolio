@@ -36,8 +36,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             /* Every time the window is scrolled ... */
     $(window).scroll( function(){
+
+        /*$(window).bind('mousewheel', function(event) {
+            if (event.originalEvent.wheelDelta >= 0) {
+                $('html, body').animate({
+            scrollTop: 0
+        }, 700, "swing");
+            }
+            else {
+                $('html, body').animate({
+            scrollTop: $("#me").offset().top
+        }, 700, "swing");
+            }
+        });*/
+
     
-        $('.mecard').each( function(i){
+        $('.mecard, .me2card').each( function(i){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             if( bottom_of_window > bottom_of_object ){
