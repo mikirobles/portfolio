@@ -12,6 +12,26 @@ var border = "4px solid #C90034"
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
+    var numact = false;
+
+
+     $("#whatsapp").click(function() {
+        if (numact === false){
+            $('#number').css("opacity", "1");
+            numact = true
+        } else {
+            $('#number').css("opacity", "0");
+            numact = false
+        }
+    });
+
+       $("#whatsapp").hover(function() {
+            $('#number').css("opacity", "1");
+    }, function(){
+            if (!numact){ $('#number').css("opacity", "0")};
+    });
+
+
      $("#whoami, #menuabout").click(function() {
         $('html, body').animate({
             scrollTop: $("#me").offset().top

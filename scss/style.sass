@@ -44,6 +44,7 @@ body
 	align-items: center
 	justify-content: center
 	height: 100vh
+	min-height: 700px
 	
 	.introcard
 		margin-left: 250px
@@ -91,7 +92,7 @@ body
 					color: white
 					margin: 0 9px
 
-				#whatsapp:hover + .number
+				#whatsapp:hover + #number
 					opacity: 1
 
 				.arrow
@@ -100,7 +101,7 @@ body
 					height: 0
 					border: 6px solid transparent
 					border-right: 6px solid white
-				.number
+				#number
 					filter: drop-shadow(-2px 3px 0px #000)
 					transition: opacity 0.2s ease
 					opacity: 0
@@ -119,6 +120,7 @@ body
 			a
 				//background-color: #820936
 				align-self: center
+				cursor: pointer
 			#whoami
 				margin-top: 135px
 
