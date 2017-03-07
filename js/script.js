@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
 
-    $("#menustuff").click(function() {
+    $("#menustuff, #checkitout").click(function() {
         $('html, body').animate({
             scrollTop: $("#stuff").offset().top
         }, 700, "swing");
