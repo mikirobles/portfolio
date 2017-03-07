@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="6.2426596mm"
-   height="150.9064mm"
-   viewBox="0 0 22.11966 534.70772"
+   width="6.208889mm"
+   height="152.39999mm"
+   viewBox="0 0 22.000001 539.99997"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -20,10 +20,10 @@
      id="defs4">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="-265.67013 : 679.90228 : 1"
-       inkscape:vp_y="0 : 1234.1613 : 0"
-       inkscape:vp_z="364.73762 : 782.5491 : 1"
-       inkscape:persp3d-origin="303.35688 : 333.12846 : 1"
+       inkscape:vp_x="-265.67014 : 679.90222 : 1"
+       inkscape:vp_y="0 : 1234.1612 : 0"
+       inkscape:vp_z="364.73763 : 782.54903 : 1"
+       inkscape:persp3d-origin="303.35689 : 333.12843 : 1"
        id="perspective3368" />
   </defs>
   <sodipodi:namedview
@@ -35,7 +35,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
      inkscape:cx="319.2082"
-     inkscape:cy="147.24671"
+     inkscape:cy="147.24669"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -77,10 +77,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-405.71654,-161.24835)">
+     transform="translate(-405.71654,-155.95606)">
     <path
        style="fill:#ff5900;fill-opacity:1;stroke:none"
-       d="m 405.71654,428.60221 0,-267.35386 2.45531,1.85202 c 1.35042,1.01861 6.32734,5.034 11.05983,8.92309 l 8.60452,7.07107 0,249.50768 0,249.50768 -8.60452,7.07106 c -4.73249,3.88909 -9.70941,7.90448 -11.05983,8.9231 l -2.45531,1.85201 0,-267.35385 z"
+       d="m 405.71654,425.95607 0,-270.00001 2.44203,1.87034 c 1.34311,1.0287 6.29311,5.08383 11,9.01141 l 8.55797,7.14106 0,251.9772 0,251.97719 -8.55797,7.14105 c -4.70689,3.92758 -9.65689,7.98271 -11,9.01141 l -2.44203,1.87034 0,-269.99999 z"
        id="path3468"
        inkscape:connector-curvature="0" />
   </g>
