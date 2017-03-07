@@ -25,9 +25,10 @@ body
 		height: 70px
 		left: 0
 		right: 0
-		transition: all 0.5s linear
+		transition: all 0.3s ease
 
 		.menuitem
+			cursor: pointer
 			transition: all 0.1s linear
 			margin: 0px 40px
 			font-family: Raleway
@@ -36,7 +37,7 @@ body
 			//border-bottom: 3px solid white
 			padding: 20px
 
-
+// 4341-3022
 
 
 .section
@@ -189,7 +190,6 @@ body
 		opacity: 0
 		&::before
 		    content: ""
-
 		    position: absolute
 		    //top: 78px;
 		    left: -261px
@@ -232,30 +232,58 @@ body
 
 			
 
+	&#stuff
+		flex-direction: column
+		justify-content: flex-start
 
-	.stufftitle
-		p.title
-			font-family: Raleway
-		justify-content: center
-		padding-top: 14px
-		height: 200px
-		width: 900px
-		background: url("../img/bar.svg")
-		background-size: 900px
-		background-repeat: no-repeat
+		#stufftitle
 
+			font-weight: 600
+			//letter-spacing: 3px
 
+		.stuffcard
+			margin-top: 100px
+			justify-content: center
+			padding-top: 17px
+			height: 200px
+			width: 900px
+			background: url("../img/bar.svg")
+			background-size: 900px
+			background-repeat: no-repeat
+			transition: all 0.1s ease
+			text-decoration: none
+
+			p.title
+				transition: all 0.1s ease
+				font-family: Raleway
+				
+
+		.item
+			cursor: pointer
+			margin-top: -80px
+			&:hover
+				background-size: 910px
+				p.title
+					font-size: 3.2em
+					
 #me 
 	//background-color: black
 	//background: linear-gradient(to bottom, rgba(82,78,208,1) 0%,rgba(166,83,221,1) 49%,rgba(239,97,137,1) 100%);
 
 @media screen and (max-width: 1100px)
-	.me2card
+	.section .me2card
 		width: 500px !important
 		height: 540px !important
+		margin-left: 0
+		&::before
+			content: ""
+			background: none
 		.iconcontainer
 			i
 				font-size: 60px !important
+
+
+
 
 img
 	width: 400px

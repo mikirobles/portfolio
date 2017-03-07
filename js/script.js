@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     $("#menustuff").click(function() {
         $('html, body').animate({
-            scrollTop: $("#me").offset().top
+            scrollTop: $("#stuff").offset().top
         }, 700, "swing");
     });
 
@@ -91,10 +91,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
             $("#menustuff").css("border-bottom", '0px solid white')
 
         } else if ($(window).scrollTop() >= ($("#intro").offset().top + $("#intro").outerHeight()) && ($(window).scrollTop() < ($("#me").offset().top + $("#me").outerHeight()))){
+            $("#header").css("opacity", '1')
             $("#menumain").css("border-bottom", '0px solid white')
             $("#menuabout").css("border-bottom", border)
             $("#menustuff").css("border-bottom", '0px solid white')
+        } else if ($(window).scrollTop() >= ($("#me").offset().top + $("#me").outerHeight()) && ($(window).scrollTop() < ($("#stuff").offset().top + $("#stuff").outerHeight()))){
+            $("#header").css("opacity", '1')
+            $("#menumain").css("border-bottom", '0px solid white')
+            $("#menuabout").css("border-bottom", '0px solid white')
+            $("#menustuff").css("border-bottom", border)
         }
+
 
     
     });
