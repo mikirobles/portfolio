@@ -298,12 +298,18 @@ body
 	.section .introcard
 		justify-content: center
 		margin-left: 0
+		filter: none
 		&::before
 			background: none
-			background-size: 35% 35%;
-			background-repeat: no-repeat;
-			left: 8vw;
-			top: 30;
+			width: 0px
+			height: 0px
+		.column-right 
+			.sociallinks
+				margin-left: 0
+				a
+					margin: 20px 70px
+			#whoami
+				margin-top: 90px
 
 
 
