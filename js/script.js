@@ -80,10 +80,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
 
         $('.stuffcard').each( function(i){
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_object = $(".stuffcard").offset().top + $(".stuffcard").outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             if( bottom_of_window > bottom_of_object + 100 ){
-                $(this).animate({'opacity':'1'},1000);
+                $(".stuffcard").animate({'opacity':'1'},1000);
             }
         });
 
