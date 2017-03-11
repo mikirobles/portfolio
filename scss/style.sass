@@ -7,14 +7,11 @@ a
 
 body
 	background-image: url(../img/background2.png)
-	//background-position: absolute
 	display: flex
 	flex-direction: column
 
 
 	header
-		//background-color: #5A1545
-		//color: white
 		color: black
 		opacity: 0
 		display: flex
@@ -34,10 +31,8 @@ body
 			font-family: Raleway
 			font-size: 20px
 			font-weight: 500
-			//border-bottom: 3px solid white
 			padding: 20px
 
-// 4341-3022
 
 
 .section
@@ -54,9 +49,7 @@ body
 		background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
 		&::before
 			content: ""
-
 			position: absolute
-			//top: 78px;
 			left: -250px
 			height: 500px
 			width: 500px
@@ -66,17 +59,11 @@ body
 	.card
 		position: relative
 		display: flex
-		//align-items: center
 		justify-content: flex-end
-		//position: absolute
-		//margin-left: 200px
 		width: 700px
 		height: 500px
 		background-color: #920A3D
 		color: white
-
-		//box-shadow: -20px 20px 0px 0px rgba(0,0,0,0.75)
-		
 
 		.column-right
 			display: flex
@@ -85,8 +72,6 @@ body
 				display: flex
 				flex-direction: row
 				align-items: center
-				//align-self: flex-end
-				//margin-right: 40px
 				margin-left: 10px
 				font-size: 30px
 				margin-top: 15px
@@ -124,11 +109,17 @@ body
 					border-radius: 3px
 					font-size: 17px
 			a
-				//background-color: #820936
 				align-self: center
 				cursor: pointer
-			#whoami
-				margin-top: 135px
+			.buttons
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				margin-left: 30px
+				#curriculum
+					height: 35px
+				#whoami
+					margin-top: 85px
 
 		.title
 			margin-top: 40px
@@ -193,7 +184,6 @@ body
 
 	.me2card
 		position: relative
-		//margin-left: 22px
 		flex-direction: column
 		justify-content: center
 		align-items: center
@@ -206,22 +196,11 @@ body
 
 
 		.title
-			 //margin: 0, -15px
 			 margin-right: 0
 			 font-size: 30px
 			 margin-top: 30px
 			 text-align: center
 
-		/*.iconcontainer
-			margin: 20px
-			display: flex
-			flex-wrap: wrap
-			justify-content: center
-			align-items: center
-			height: 400px
-			i
-				margin: 15px
-				font-size: 120px*/
 
 		.iconcontainer
 			margin: 20px
@@ -274,14 +253,9 @@ body
 			margin-top: -100px
 			&:hover
 				background-size: 910px
-				//filter: drop-shadow(1px 3px 20px rgba(0,0,0,0.43))
 				p.title
 					font-size: 3.05em
 					
-#me 
-	//background-color: black
-	//background: linear-gradient(to bottom, rgba(82,78,208,1) 0%,rgba(166,83,221,1) 49%,rgba(239,97,137,1) 100%);
-
 @media screen and (max-width: 1100px)
 	.section .me2card
 		width: 500px !important
@@ -296,6 +270,7 @@ body
 
 @media screen and (max-width: 950px)
 	.section .introcard
+		width: 100vw
 		justify-content: center
 		margin-left: 0
 		filter: none
@@ -308,8 +283,31 @@ body
 				margin-left: 0
 				a
 					margin: 20px 70px
-			#whoami
-				margin-top: 90px
+
+			.buttons
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				margin-bottom: 30px
+
+	#stuff.section
+		.stuffcard
+			display: flex
+			justify-content: center
+			align-items: center
+			background: none
+			background-color: #C90034
+			margin: 10px
+			height: 90px
+			padding: 0
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23383838' fill-opacity='0.19'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E")
+			&:hover
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23383838' fill-opacity='0.31'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+				background-size: inherit
+			.title
+				margin: 0
+				height: 1em
+
 
 
 
