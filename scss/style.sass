@@ -32,6 +32,8 @@ body
 			font-size: 20px
 			font-weight: 500
 			padding: 20px
+			&:hover
+				font-weight: 600
 
 
 
@@ -225,46 +227,74 @@ body
 
 	&#stuff
 		min-height: 100vh
+		position: relative
 		height: auto
 		flex-direction: column
-		justify-content: flex-start
-
-		#stufftitle
-
-			font-weight: 600
-			//letter-spacing: 3px
-
-		.stuffcard
-			opacity: 0
-			margin-top: 100px
-			justify-content: center
-			padding-top: 17px
-			height: 200px
-			width: 900px
-			background: url("../img/bar.svg")
-			background-size: 900px
-			background-repeat: no-repeat
-			transition: all 0.1s ease
-			text-decoration: none
-
-			p.title
-				transition: all 0.1s ease
-				font-family: Raleway
-				margin-top: 40px
-				font-size: 3em
+		justify-content: center
+		align-items: center
+		
+		#stuffcontainer
+			width: 80%
+			display: flex
+			flex-wrap: wrap
+			transition: all 0.2s ease
+			.stuffitem
+				transition: all 0.2s ease
 				color: white
-				
+				padding: 20px
+				width: 50%
+				min-height: 160px
+				display: flex
+				flex-direction: column
+				justify-content: flex-start
+				align-items: center
+				text-decoration: none
+				background-color: rgba(201, 0, 54, 0.81)
+				border: 1px solid #920A3D
+				box-sizing: border-box
+				.title
+					font-family: Raleway
+					font-size: 30px
+					font-weight: 300
+					margin-top: 10px
+					text-align: center
 
-		.item
-			background: url("../img/bar2.svg")
-			background-size: 900px
-			background-repeat: no-repeat
-			cursor: pointer
-			margin-top: -100px
-			&:hover
-				background-size: 910px
-				p.title
-					font-size: 3.05em
+				.text
+					display: flex
+					justify-content: center
+					align-items: center
+					height: max-content
+					font-family: Raleway
+					font-size: 18px
+					font-weight: 300
+					font-style: italic
+					margin: 17px 
+				&:hover
+					background-color: #c02753;
+					background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%239a1d41' fill-opacity='0.45' fill-rule='evenodd'/%3E%3C/svg%3E");					transition: all 0.1s ease
+		#stufftitle
+			width: 100%
+			height: 80px
+			padding: 5px
+			border-top-right-radius: 8px
+			border-top-left-radius: 8px
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: #920A3D
+			background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+			#stuff
+				font-family: Raleway
+				font-size: 33px
+				font-weight: 500
+
+
+@media screen and (min-width: 1500px)
+	.section#stuff #stuffcontainer
+		width: 60%
+	.section#stuff #stuffcontainer .stuffitem
+		width: 33.33%
+
 					
 @media screen and (max-width: 1100px)
 	.section .me2card
@@ -300,7 +330,7 @@ body
 	.section
 		width: 100%
 		min-height: auto
-		.card
+		.mecard, .me2card
 			height: auto
 			padding: 20px 0
 		.card .titlename
@@ -389,27 +419,11 @@ body
 		#stufftitle
 			margin-top: 20%
 
-		.stuffcard
-			width: 100vw
-			display: flex
-			justify-content: center
-			align-items: center
-			background: none
-			background-color: #C90034
-			margin: 10px
-			height: 50px
-			padding: 0
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23383838' fill-opacity='0.19'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E")
-			&:hover
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23383838' fill-opacity='0.31'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
-				background-size: inherit
-			p.title
-				margin: 0
-				height: 1em
-				font-size: 1.4em
-				&:hover
-					font-size: 1.6em
-			
+	.section#stuff #stuffcontainer .stuffitem
+		width: 100%
+	
+	.section#stuff #stuffcontainer
+		width: 80%
 
 
 

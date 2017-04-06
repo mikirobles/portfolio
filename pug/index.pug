@@ -67,26 +67,36 @@ body
 
 
 	.section#stuff
-		a.card.stuffcard#stufftitle
-			p.title#stuff Here are some things I did:
-		a.card.stuffcard.item(href="https://erosilk.github.io/recipe-box/", target="_blank")
-			p.title Recipe Box
-		a.card.stuffcard.item(href="http://codepen.io/erosilk/full/qrpEzP/", target="_blank")
-			p.title Markdown Previewer
-		a.card.stuffcard.item(href="http://botwcheck.cf/", target="_blank")
-			p.title BOTW Emulation Status
-		a.card.stuffcard.item(href="https://erosilk.github.io/tic-tac-toe/", target="_blank")
-			p.title Tic Tac Toe
-		a.card.stuffcard.item(href="https://erosilk.github.io/simon-game/", target="_blank")
-			p.title Simon Game
-		a.card.stuffcard.item(href="https://erosilk.github.io/pomodoro-clock/", target="_blank")
-			p.title Pomodoro Clock
-		a.card.stuffcard.item(href="https://erosilk.github.io/random-quote-machine/", target="_blank")
-			p.title Random Quote Machine
-		a.card.stuffcard.item(href="https://erosilk.github.io/simple-calculator/", target="_blank")
-			p.title Simple Calculator
-		a.card.stuffcard.item(href="https://erosilk.github.io/twitch-json-api/", target="_blank")
-			p.title Twitch.tv JSON API
+		#stuffcontainer
+			a.card.stuffcard#stufftitle
+				p.title#stuff Here are some things I did:
+			a.stuffitem(href="https://erosilk.github.io/recipe-box/", target="_blank")
+				p.title Recipe Box
+				p.text A app to save your favourite recipes! The data is kept in LocalStorage. Made with React.
+			a.stuffitem(href="http://codepen.io/erosilk/full/qrpEzP/", target="_blank")
+				p.title Markdown Previewer
+				p.text Simple Markdown syntax previewer made with React.
+			a.stuffitem(href="http://botwcheck.cf/", target="_blank")
+				p.title BOTW Emulation Status
+				p.text Website to check on the latest Zelda game emulation progress. Used by 2000 people 💪.
+			a.stuffitem(href="https://erosilk.github.io/tic-tac-toe/", target="_blank")
+				p.title Tic Tac Toe
+				p.text Well known game. Try to win against my AI.
+			a.stuffitem(href="https://erosilk.github.io/simon-game/", target="_blank")
+				p.title Simon Game
+				p.text Think you're good memorizing sound patterns?! THINK AGAIN, try out my Simon game.
+			a.stuffitem(href="https://erosilk.github.io/pomodoro-clock/", target="_blank")
+				p.title Pomodoro Clock
+				p.text Time your breaks! MAXIMIZE PRODUCTIVITY!!!!!!
+			a.stuffitem(href="https://erosilk.github.io/random-quote-machine/", target="_blank")
+				p.title Random Quote Machine
+				p.text Read some inspiring quotes from people who know their design.
+			a.stuffitem(href="https://erosilk.github.io/simple-calculator/", target="_blank")
+				p.title Simple Calculator
+				p.text Make some basic operations with this fancy calculator.
+			a.stuffitem(href="https://erosilk.github.io/twitch-json-api/", target="_blank")
+				p.title Twitch.tv JSON API
+				p.text Here we use the Twitch.tv API to get some info about livestream channels!
 			
 
 script(src="https://code.jquery.com/jquery-3.1.1.min.js")
