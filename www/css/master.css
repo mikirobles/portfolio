@@ -1,12 +1,20 @@
+body {
+  transition: 1s ease all; }
+
 .gianttext {
   position: relative;
-  font-family: HiraMaruProN-W4;
+  font-family: Nunito;
   font-size: 109px;
   color: #000000;
   letter-spacing: -1.57px;
   margin: -20px 0; }
   .gianttext > span {
     opacity: 0.16; }
+
+h3 {
+  font-family: AndaleMono;
+  font-size: 19px;
+  letter-spacing: 0.53px; }
 
 .container {
   width: 100%;
@@ -22,13 +30,29 @@
   .container .gianttext:nth-child(2) {
     margin-left: 200px; }
 
-.about {
-  width: 10px;
-  height: 10px;
+.dottie {
+  width: 0px;
+  height: 20px;
   background-color: #2660E7;
   position: absolute;
-  z-index: 100;
-  border-radius: 10px; }
+  border-radius: 10px;
+  color: red; }
+
+.aboutinner {
+  width: 600px;
+  height: 600px;
+  transform: translateX(-32%);
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background-color: black;
+  color: white;
+  overflow-y: hidden;
+  padding: 20px;
+  box-sizing: border-box; }
+  .aboutinner img {
+    width: 40%;
+    float: right; }
 
 .menu {
   position: absolute; }
@@ -46,7 +70,7 @@
 .menu {
   display: flex;
   flex-direction: column;
-  font-family: AndaleMono;
+  font-family: Ubuntu Mono;
   font-size: 19px;
   color: #000000;
   letter-spacing: 0.53px; }
@@ -56,11 +80,11 @@
       color: #2660E7; }
 
 .a.right.selected:first-child {
-  transform: scale(2) translateY(-30%) translateX(10%);
+  transform: scale(2) translateY(-30%) translateX(30%);
   margin-left: 20%; }
 
 .a.right.selected:nth-child(2) {
-  transform: scale(2) translateY(30%) translateX(10%);
+  transform: scale(2) translateY(30%) translateX(30%);
   margin-left: 20%; }
 
 .a {
