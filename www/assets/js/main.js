@@ -11,35 +11,64 @@ $(".a.right").hover(
     }
 )
 
+$("#about").hover(
+    function () {
+        $(this).css("color", "white");
+        $("body").css("background-color", "#000990");
+    },
+    function () {
+        $(this).css("color", "black");
+        $("body").css("background-color", "#FFF");
+    }
+)
+
+
+
+let showInner;
 
 $(".a.right:first-child").hover(
     function () {
+        let animLength = 1200;
         anime({
-            targets: '.about',
+            targets: '.dottie',
             borderRadius: [
                 { value: 0, duration: 1 }
             ],
-            scaleY: [
-                { value: 1, duration: 900 },
-                { value: 60, duration: 1200 }
+            height: [
+                { value: '20px', duration: 900 },
+                { value: '600px', duration: animLength }
             ],
-            scaleX: [
-                { value: 60, duration: 1200 }
+            width: [
+                { value: '600px', duration: animLength }
             ],
             translateX: [
-                { value: -3.2, duration: 200 }
+                { value: "-32%", duration: 200 }
             ],
             backgroundColor: '#000',
-            duration: 1200,
+            duration: animLength,
             loop: false
         });
+
+        showInner = setTimeout(function () {
+            if ($(".a.right:first-child").hasClass("selected")){
+                $(".aboutinner").css("visibility", "visible");
+                $(".aboutinner").css("opacity", "1");
+            }
+        }, animLength)
     },
     function () {
-        anime.remove(".about");
+
+        clearTimeout(showInner);
+        $(".aboutinner").css("visibility", "hidden");       
+
+        anime.remove(".dottie");
         anime({
-            targets: '.about',
-            scaleY: [
-                { value: 1, duration: 1000 }
+            targets: '.dottie',
+            width: [
+                { value: "0px", duration: 100 }
+            ],
+            height: [
+                { value: "20px", duration: 100 }
             ],
             borderRadius: [
                 { value: 0, duration: 700 },
