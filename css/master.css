@@ -40,7 +40,7 @@ h3 {
   background-color: #2660E7;
   position: absolute; }
 
-.aboutinner {
+.about-inner, .left-inner {
   width: 600px;
   height: 600px;
   transform: translateX(-32%);
@@ -52,7 +52,7 @@ h3 {
   overflow-y: hidden;
   padding: 20px;
   box-sizing: border-box; }
-  .aboutinner img {
+  .about-inner img, .left-inner img {
     width: 40%;
     float: right; }
 
@@ -77,7 +77,8 @@ h3 {
   color: #000000;
   letter-spacing: 0.53px; }
   .menu > span {
-    transition: 0.3s ease all; }
+    transition: 0.3s ease all;
+    margin: 1px 0; }
     .menu > span:hover {
       color: #2660E7; }
 
