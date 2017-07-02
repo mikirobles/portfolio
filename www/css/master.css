@@ -5,6 +5,19 @@
 body {
   transition: 1s ease all; }
 
+p, li {
+  font-family: Ubuntu Mono;
+  font-size: 19px; }
+
+h3 {
+  font-family: Ubuntu Mono;
+  font-size: 19px;
+  letter-spacing: 0.53px;
+  margin-bottom: 1em; }
+
+li {
+  list-style-type: none; }
+
 .gianttext {
   position: relative;
   font-family: Nunito;
@@ -14,11 +27,6 @@ body {
   margin: -20px 0; }
   .gianttext > span {
     opacity: 0.16; }
-
-h3 {
-  font-family: AndaleMono;
-  font-size: 19px;
-  letter-spacing: 0.53px; }
 
 .container {
   width: 100%;
@@ -93,9 +101,6 @@ h3 {
 .a {
   width: 100%; }
 
-h3 {
-  margin-bottom: 1em; }
-
 .disclaimer {
   font-family: Ubuntu Mono;
   font-size: 19px;
@@ -104,3 +109,7 @@ h3 {
 
 span {
   cursor: default; }
+
+.portfolio-inner {
+  background-color: white;
+  color: black; }

@@ -44,21 +44,21 @@ function leftWindowOutAnimation() {
   });
 }
 
-function showInner(window, bodyColor, animLength) {
+function showInner(item, window, bodyColor, animLength) {
   setTimeout(function() {
-    if ($(aboutItem).hasClass("selected")) {
-      $(aboutWindow).css("visibility", "visible");
-      $(aboutWindow).css("opacity", "1");
+    if ($(item).hasClass("selected")) {
+      $(window).css("visibility", "visible");
+      $(window).css("opacity", "1");
       $("body").css("background-color", bodyColor);
-      $("#about").css("color", "white");
+      $(item).css("color", "white");
     }
   }, animLength);
 }
 
-function hideInner(window) {
+function hideInner(item, window) {
   $(window).css("visibility", "hidden");
   $("body").css("background-color", "white");
-  $("#about").css("color", "black");
+  $(item).css("color", "black");
 }
 
 function leftWindow(item, window, windowColor, bodyColor) {
@@ -66,16 +66,17 @@ function leftWindow(item, window, windowColor, bodyColor) {
     // On mouse in
     function() {
       leftWindowAnimation(animLength, windowColor);
-      showInner(window, bodyColor, animLength);
+      showInner(item, window, bodyColor, animLength);
     },
     // On mouse out
     function() {
       leftWindowOutAnimation();
       clearTimeout(showInner);
-      hideInner(window);
+      hideInner(item, window);
     }
   );
 }
 
 leftWindow(aboutItem, aboutWindow, "#000", "#000990");
+leftWindow(portfolioItem, portfolioWindow, "#FFF", "#ff7b00");
 
