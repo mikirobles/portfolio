@@ -51,7 +51,7 @@ h3 {
     //transition: 0.3s ease-in all; 
 }
 
-.aboutinner {
+.about-inner, .left-inner {
     width: 600px;
     height: 600px;
     transform: translateX(-32%);
@@ -97,6 +97,7 @@ h3 {
     letter-spacing: 0.53px;
     > span {
         transition: 0.3s ease all;
+        margin: 1px 0;
         &:hover {
             color: #2660E7
         }
