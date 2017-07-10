@@ -39,6 +39,7 @@ li {
     color: #000000;
     letter-spacing: -1.57px;
     margin: -20px 0;
+    z-index: 0;
     >span {
         opacity: 0.16;
     }
@@ -63,8 +64,7 @@ li {
 
 .dottie {
     width: 0px;
-    height: 20px;
-    background-color: #2660E7;
+    height: 30px;
     position: absolute; //transition: 0.3s ease-in all; 
 }
 
@@ -102,6 +102,7 @@ li {
     bottom: 0;
     right: 0;
     transform: translateX(120%) translateY(-100%);
+
 }
 
 .container *:nth-child(2) .menu {
@@ -155,6 +156,14 @@ li {
     color: rgba(0, 0, 0, 0.28);
     font-weight: 100;
     letter-spacing: 0.53px;
+    z-index: 100;
+    a i {
+        color: rgba(0, 0, 0, 0.28);
+        transition: 0.2s color ease;
+        &:hover {
+            color: rgba(0, 0, 0, 0.48);
+        }
+    }
 }
 
 span {
