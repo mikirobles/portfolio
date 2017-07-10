@@ -31,7 +31,8 @@ li {
   font-size: 109px;
   color: #000000;
   letter-spacing: -1.57px;
-  margin: -20px 0; }
+  margin: -20px 0;
+  z-index: 0; }
   .gianttext > span {
     opacity: 0.16; }
 
@@ -51,8 +52,7 @@ li {
 
 .dottie {
   width: 0px;
-  height: 20px;
-  background-color: #2660E7;
+  height: 30px;
   position: absolute; }
 
 .left-inner {
@@ -121,7 +121,13 @@ li {
   font-size: 19px;
   color: rgba(0, 0, 0, 0.28);
   font-weight: 100;
-  letter-spacing: 0.53px; }
+  letter-spacing: 0.53px;
+  z-index: 100; }
+  .disclaimer a i {
+    color: rgba(0, 0, 0, 0.28);
+    transition: 0.2s color ease; }
+    .disclaimer a i:hover {
+      color: rgba(0, 0, 0, 0.48); }
 
 span {
   cursor: default; }
