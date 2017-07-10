@@ -29,7 +29,7 @@ backBtn.on("click", function () {
 function showInner(item, window, bodyColor, animLength) {
   showInnerTO = setTimeout(function () {
     if ($(item).hasClass("selected")) {
-      $(window).css("visibility", "visible");
+      $(window).css("display", "block");
       $(window).css("opacity", "1");
       $("body").css("background-color", bodyColor);
       //backBtn.css("transform", "scale(1.2)");
@@ -54,7 +54,7 @@ function showInner(item, window, bodyColor, animLength) {
 }
 
 function hideInner(item, window) {
-  $(window).css("visibility", "hidden");
+  $(window).css("display", "none");
   $("body").css("background-color", "white");
   $(item).css("color", "black");
 }
@@ -106,26 +106,39 @@ var portfolioInner = document.querySelector(".portfolio-inner ul");
 var portfolio = [
   {
     name: "freeCodeCamp",
-    description: "<p>All kinds of simple web apps. Some are games, others are utilities.</p><p>Made with JS, React and <i>love.</i></p>",
+    description: "<p>All kinds of simple web apps. Some are games, others are utilities.</p><p>Made with CSS, JS and <i>love.</i></p>",
     links: [{
-      github: "https://github.com/erosilk/fcc-projects",
+      github: "https://github.com/erosilk/fcc-projects"
     }]
   },
   {
     name: "Gritour Website + Logo",
     description: "<p>I made the website for Gritour: a Freelancer Tour Guide from Buenos Aires, Argentina. <p>I also designed her logo</p>",
     links: [{
-
+      link: "http://www.gritour.com.ar"
     }]
   },
   {
     name: "BOTW Check",
-    description: "<p>The latest Zelda game is going to be available for PC (via emulation)!</p><p>This website will notify you when emulation reaches an stable status.</p>SUCCESS! More than 2.000 people suscribed in less than two weeks."
+    description: "<p>The latest Zelda game is going to be available for PC (via emulation)!</p><p>This website will notify you when emulation reaches an stable status.</p>SUCCESS! More than 2.000 people suscribed in less than two weeks.",
+    links: [{
+      link: "http://http://botwcheck.cf/"
+    },
+    {
+      github: "https://github.com/erosilk/BOTWCheck"
+    }]
   },
 ]
 
 portfolio.forEach(el => {
-  portfolioInner.innerHTML += '<li><div class="portfolio-project"><div class="project-main">' + el.name + '<div class="project-links"><i class="icon-facebook"></i></div></div><div class="description">' + el.description + '</div></div></li>';
+  var links = "";
+
+  el.links.forEach(obj => {
+    let key = Object.keys(obj)[0];
+    links += '<a target="_blank" href="'+obj[key]+'"><i class="icon-' + key + '"></i></a>'
+  })
+
+  portfolioInner.innerHTML += '<li><div class="portfolio-project"><div class="project-main">' + el.name + '<div class="project-links">' + links + '</div></div><div class="description">' + el.description + '</div></div></li>';
 })
 
 // Animations

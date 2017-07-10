@@ -2,6 +2,15 @@
   margin: 0;
   padding: 0; }
 
+a {
+  color: black;
+  text-decoration: none; }
+
+.project-links a {
+  transition: 0.2s ease all; }
+  .project-links a:hover {
+    color: #c15d00; }
+
 body {
   transition: 1s ease all; }
 
@@ -52,7 +61,7 @@ li {
   height: 600px;
   transform: translateX(-32%);
   position: absolute;
-  visibility: hidden;
+  display: none;
   opacity: 0;
   background-color: black;
   color: white;
@@ -76,6 +85,8 @@ li {
   bottom: 0;
   left: 0;
   transform: translateX(-120%) translateY(-85%); }
+  .container *:nth-child(2) .menu span:first-child {
+    cursor: pointer; }
 
 .menu {
   display: flex;
@@ -114,12 +125,11 @@ span {
 .portfolio-inner {
   background-color: white;
   color: black;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .portfolio-project {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   padding: 10px;
   box-sizing: border-box; }
   .portfolio-project .description {
@@ -134,12 +144,14 @@ span {
   display: none;
   opacity: 0;
   color: black;
-  width: 100px;
-  z-index: 1000;
+  width: 100%;
+  text-align: right;
   cursor: pointer; }
 
 .project-main {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 100%;
+  text-align: right; }
   .project-main div {
     margin-top: 10px; }
