@@ -5,6 +5,9 @@ var browserSync = require('browser-sync').create();
 var assets = "www/assets"
 var www = "www/"
 
+var ghpages = require('gh-pages');
+var path = require('path');
+
 gulp.task('sass', function(){
   return gulp.src(www + '/scss/*.+(scss|sass)')
     .pipe(sass().on('error', sass.logError)) // Converts Sass to CSS with gulp-sass
@@ -31,3 +34,8 @@ gulp.task('default', ['browserSync', 'sass'], function(){
   gulp.watch(assets + '/js/*.js', browserSync.reload);
   // Other watchers
 })
+
+gulp.task('publish', function(){
+  ghpages.publish('www', function(err){console.log(err)})
+})
+
