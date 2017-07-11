@@ -170,12 +170,15 @@ var discoTimeOut;
 var initialDisclaimer = $(".disclaimer").html();
 
 var song = new Howl({
-  src: ['https://crossorig.in/http://alicemp3.su/mp3/bodca370dmc96c3u8452fbbn47dy3v8b4c44b7dy6b7va84u14en692vb4cm4599.mp3']
+  src: ['https://crossorig.in/http://alicemp3.su/mp3/bodca370dmc96c3u8452fbbn47dy3v8b4c44b7dy6b7va84u14en692vb4cm4599.mp3'],
+  volume: 0.5,
+  loop: true,
+  preload: false
 });
 
 $("#partyBtn").on('click', function () {
 
-
+  song.load();
   if (!isPlaying) {
     let isLoading = true;
     $("#partyBtn").html("Loading...");
