@@ -223,6 +223,7 @@ function discoReset() {
   $("#partyBtn").html("Disco mode")
 
   $(".disclaimer").html(initialDisclaimer);
+  $(".disclaimer").css("color", "initial")
 
   song.stop();
   clearTimeout(discoTimeOut);
