@@ -178,6 +178,8 @@ $("#partyBtn").on('click', function () {
 
   if (!isPlaying) {
     let isLoading = true;
+    $("#partyBtn").html("Loading...");
+
     if (!isPlaying || (!isPlaying && isLoading)) {
       song.play();
     }
@@ -189,7 +191,6 @@ $("#partyBtn").on('click', function () {
 
       clearTimeout(discoTimeOut);
       discoMode();
-      $("#partyBtn").innerHTML = "STOP";
       $(".a:not(#partyBtn)").css("display", "none");
     })
 
@@ -218,7 +219,7 @@ function discoReset() {
   $("#partyBtn").html("Disco mode")
 
   $(".disclaimer").html(initialDisclaimer);
-  $(".disclaimer").css("color", "initial")
+  $(".disclaimer").css("color", "rgba(0, 0, 0, 0.28)")
 
   song.stop();
   clearTimeout(discoTimeOut);
