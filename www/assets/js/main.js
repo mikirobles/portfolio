@@ -16,7 +16,7 @@ function leftWindowAnimation(animLength, bgColor) {
   anime({
     targets: ".dottie",
     height: [
-      { value: "20px", duration: ((2*animLength)/3) },
+      { value: "20px", duration: ((2 * animLength) / 3) },
       { value: "600px", duration: animLength }
     ],
     width: [{ value: "600px", duration: animLength }],
@@ -55,20 +55,20 @@ backBtn.on("click", function () {
 })
 
 function toggleBackBtn() {
-  if (backBtn.css("display") == "none"){
+  if (backBtn.css("display") == "none") {
     backBtn.css("display", "block")
     backBtn.css("opacity", "0")
-      anime({
-        targets: ".backbtn",
-        opacity: 1,
-        duration: 2000,
-        delay: 500,
-        loop: false
-  })
+    anime({
+      targets: ".backbtn",
+      opacity: 1,
+      duration: 2000,
+      delay: 500,
+      loop: false
+    })
   } else {
     backBtn.css("display", "none")
   }
-  
+
 }
 
 function showInner(item, $window, bodyColor, animLength) {
@@ -119,8 +119,8 @@ function leftWindow(item, $window, windowColor, bodyColor) {
 
 }
 
-leftWindow(aboutItem, aboutWindow, "#000", "#000990");
-leftWindow(portfolioItem, portfolioWindow, "#ff7b00", "#ff7b00");
+leftWindow(aboutItem, aboutWindow, "#000", "#2c3e50");
+leftWindow(portfolioItem, portfolioWindow, "#e67e22", "#e67e22");
 
 
 // Portfolio data
@@ -164,3 +164,117 @@ portfolio.forEach(el => {
   portfolioInner.innerHTML += '<li><div class="portfolio-project"><div class="project-main">' + el.name + '<div class="project-links">' + links + '</div></div><div class="description">' + el.description + '</div></div></li>';
 })
 
+// Party Mode
+
+var ogBody = $("body").css("background-color");
+var ogGiantText = $(".gianttext").css("color");
+var ogGiantTextOpacity = $(".gianttext > span").css("opacity");
+var ogGiantTextFont = $(".gianttext").css("font-family");
+var isPlaying = false;
+var discoTimeOut;
+var initialDisclaimer = $(".disclaimer").html();
+
+var song = new Howl({
+  src: ['https://crossorig.in/http://alicemp3.su/mp3/bodca370dmc96c3u8452fbbn47dy3v8b4c44b7dy6b7va84u14en692vb4cm4599.mp3']
+});
+
+$("#partyBtn").on('click', function () {
+
+
+  if (!isPlaying) {
+    let isLoading = true;
+    if (!isPlaying || (!isPlaying && isLoading)) {
+      song.play();
+    }
+
+    song.on('play', function () {
+      isPlaying = true;
+      isLoading = false;
+
+
+      clearTimeout(discoTimeOut);
+      discoMode();
+      $("#partyBtn").innerHTML = "STOP";
+      $(".a:not(#partyBtn)").css("display", "none");
+    })
+
+    return
+  }
+  discoReset();
+
+})
+
+function discoReset() {
+  $(".a:not(#partyBtn)").css("display", "block");
+
+  isPlaying = false;
+  isLoading = false;
+
+  $("body").css("background-color", ogBody);
+  $("body").css("transition", "1s ease all");
+
+  $(".gianttext").css("color", ogGiantText);
+  $(".gianttext > span").css("opacity", ogGiantTextOpacity);
+  $(".gianttext").css("font-family", ogGiantTextFont);
+
+  $("#partyBtn").css("position", "initial")
+  $("#partyBtn").css("color", "initial")
+  $("#partyBtn").css("font-size", "19px")
+  $("#partyBtn").html("Disco mode")
+
+  $(".disclaimer").html(initialDisclaimer);
+
+  song.stop();
+  clearTimeout(discoTimeOut);
+
+}
+
+function discoMode() {
+
+  $("#partyBtn").html("STOP!");
+  $("#partyBtn").css("color", "#ecf0f1")
+  $("#partyBtn").css("position", "absolute")
+  $("#partyBtn").css("top", "-290px")
+  $("#partyBtn").css("left", "-180px")
+  $("#partyBtn").css("font-size", "40px")
+
+  $(".disclaimer").html("song made by Siriusmo!")
+
+  if (isPlaying) {
+    let altBody = "#e74c3c";
+    let altText = "#ecf0f1";
+    let textFont = "Permanent Marker";
+
+    toggleColors();
+
+    function toggleColors() {
+
+      $("body").css("transition", "none");
+
+      if ($("body").css("background-color") === ogBody) {
+        $("body").css("background-color", altBody);
+        $(".gianttext").css("color", altText);
+        $(".gianttext > span").css("opacity", "1");
+        $(".gianttext").css("font-family", textFont);
+        $("#partyBtn").css("color", altText);
+        $(".disclaimer").css("color", altText)
+
+      } else {
+        $("body").css("background-color", ogBody);
+        $(".gianttext").css("color", ogGiantText);
+        $(".gianttext > span").css("opacity", ogGiantTextOpacity);
+        $(".gianttext").css("font-family", ogGiantTextFont);
+        $("#partyBtn").css("color", "#e74c3c");
+        $(".disclaimer").css("color", "#e74c3c");
+      }
+
+      discoTimeOut = setTimeout(toggleColors, 500)
+    }
+
+    function bounceText() {
+      
+    }
+    
+  }
+
+}
