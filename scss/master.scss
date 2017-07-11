@@ -89,6 +89,7 @@ li {
 }
 
 .about-inner {
+    z-index: 2;
     .backbtn {
         color: white;
     }
@@ -113,10 +114,6 @@ li {
 
     span:first-child {
         cursor: pointer;
-    }
-
-    span:nth-child(2) {
-    text-decoration: line-through;
     }
 }
 
@@ -172,7 +169,7 @@ span {
 }
 
 .portfolio-inner {
-    background-color: white;
+    background-color:#F2F1EF;
     color: black;
     overflow-y: auto;
     z-index: 2;
@@ -199,6 +196,7 @@ span {
     text-align: right;
     display: none;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .project-main {
