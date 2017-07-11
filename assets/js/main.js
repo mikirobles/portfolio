@@ -6,7 +6,6 @@ var selectedItem = "";
 var selectedWindow = "";
 var backBtn = $(".backbtn");
 var animLength = 1000;
-var inFocus = false;
 var lock = false;
 var showInnerTO;
 
@@ -48,7 +47,6 @@ backBtn.on("click", function () {
 
   toggleBackBtn();
 
-  inFocus = false;
   leftWindowOutAnimation();
   clearTimeout(showInnerTO);
   hideInner(selectedItem, selectedWindow);
@@ -66,7 +64,10 @@ function toggleBackBtn() {
       loop: false
     })
   } else {
-    backBtn.css("display", "none")
+    if (!lock) {
+      backBtn.css("display", "none")
+    }
+
   }
 
 }
@@ -78,13 +79,8 @@ function showInner(item, $window, bodyColor, animLength) {
       $($window).css("opacity", "1");
       $("body").css("background-color", bodyColor);
       $(item).css("color", "white");
-      inFocus = true;
 
-
-      lock = true;
       toggleBackBtn();
-
-
     }
   }, animLength);
 }
@@ -99,24 +95,23 @@ function hideInner(item, $window) {
 
 function leftWindow(item, $window, windowColor, bodyColor) {
 
-  if (!lock) {
-    $(item).click(
-      // On mouse in
-      function () {
-        if (!inFocus) {
-          $(this).addClass("selected");
-          $(".container").css("transform", "scale(0.8)");
-          $("span:not(.selected)").css("filter", "blur(3px)");
+  $(item).click(
+    // On mouse in
+    function () {
+      if (!lock) {
+        lock = true;
+        $(this).addClass("selected");
+        $(".container").css("transform", "scale(0.8)");
+        $("span:not(.selected)").css("filter", "blur(3px)");
 
-          selectedItem = item;
-          selectedWindow = $window;
-          leftWindowAnimation(animLength, windowColor);
-          showInner(item, $window, bodyColor, animLength, lock);
-        }
+        selectedItem = item;
+        selectedWindow = $window;
+        leftWindowAnimation(animLength, windowColor);
+        showInner(item, $window, bodyColor, animLength, lock);
+
       }
-    );
-  }
-
+    }
+  )
 }
 
 leftWindow(aboutItem, aboutWindow, "#000", "#2c3e50");
@@ -273,9 +268,9 @@ function discoMode() {
     }
 
     function bounceText() {
-      
+
     }
-    
+
   }
 
 }
