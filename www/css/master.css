@@ -167,3 +167,16 @@ span {
   text-align: right; }
   .project-main div {
     margin-top: 10px; }
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: none; }
+  .mobile-apology {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (min-width: 800px) {
+  .mobile-apology {
+    display: none; } }
