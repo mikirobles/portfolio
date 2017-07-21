@@ -281,6 +281,11 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", 
     $("#partyBtn").css("font-size", "40px")
 
     $(".disclaimer").html("song made by Siriusmo!")
+    WebFont.load({
+        google: {
+            families: ['Permanent Marker']
+        }
+    });
 
     if (isPlaying) {
       let altBody = "#e74c3c";
