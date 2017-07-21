@@ -117,6 +117,14 @@ function leftWindow(item, $window, windowColor, bodyColor) {
 leftWindow(aboutItem, aboutWindow, "#000", "#2c3e50");
 leftWindow(portfolioItem, portfolioWindow, "#e67e22", "#e67e22");
 
+$(aboutItem).click(function () {
+  var aboutImg = document.querySelector(".about-inner img[data-src]");
+  aboutImg.setAttribute("src", aboutImg.getAttribute("data-src"));
+  aboutImg.onload = function () {
+    aboutImg.removeAttribute("data-src");
+  }
+});
+
 
 // Portfolio data
 
@@ -124,9 +132,22 @@ var portfolioInner = document.querySelector(".portfolio-inner ul");
 var portfolio = [
   {
     name: "freeCodeCamp",
-    description: "<p>All kinds of simple web apps. Some are games, others are utilities.</p><p>Made with CSS, JS and <i>love.</i></p><i>Cool presentation coming soon.</i>",
-    links: [{
+    description: "<p>All kinds of simple web apps. Some are games, others are utilities.</p><p>Made with CSS, JS and <i>love.</i></p>",
+    links: [ {
+      link: "/freecode.html"  
+    },
+    {
       github: "https://github.com/erosilk/fcc-projects"
+    }]
+  },
+  {
+    name: "mikireader",
+    description: "<p>A simple, server-less .epub reader in your browser</p>",
+    links: [{
+      link: "https://erosilk.github.io/mikireader/"
+    },
+    {
+      github: "https://github.com/erosilk/mikireader"
     }]
   },
   {
@@ -153,7 +174,7 @@ portfolio.forEach(el => {
 
   el.links.forEach(obj => {
     let key = Object.keys(obj)[0];
-    links += '<a target="_blank" href="' + obj[key] + '"><i class="icon-' + key + '"></i></a>'
+    links += '<a rel="noopener" target="_blank" href="' + obj[key] + '"><i class="icon-' + key + '"></i></a>'
   })
 
   portfolioInner.innerHTML += '<li><div class="portfolio-project"><div class="project-main">' + el.name + '<div class="project-links">' + links + '</div></div><div class="description">' + el.description + '</div></div></li>';
@@ -271,10 +292,7 @@ function discoMode() {
       discoTimeOut = setTimeout(toggleColors, 500)
     }
 
-    function bounceText() {
-
-    }
-
   }
 
 }
+

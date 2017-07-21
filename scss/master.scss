@@ -19,9 +19,14 @@ body {
     transition: 1s ease all;
 }
 
+h1 {
+    font-family: Ubuntu Mono;
+}
+
 p,
 li,
-h3 {
+h3,
+{
     font-family: Ubuntu Mono;
     font-size: 19px;
     letter-spacing: 0.53px;
@@ -73,8 +78,7 @@ li {
     width: 600px;
     height: 600px;
     transform: translateX(-32%);
-    position: absolute;
-    //visibility: hidden;
+    position: absolute; //visibility: hidden;
     display: none;
     opacity: 0;
     background-color: black;
@@ -95,7 +99,6 @@ li {
     }
 }
 
-
 .menu {
     position: absolute;
 }
@@ -104,14 +107,12 @@ li {
     bottom: 0;
     right: 0;
     transform: translateX(120%) translateY(-100%);
-
 }
 
 .container *:nth-child(2) .menu {
     bottom: 0;
     left: 0;
     transform: translateX(-120%) translateY(-85%);
-
     span:first-child {
         cursor: pointer;
     }
@@ -169,7 +170,7 @@ span {
 }
 
 .portfolio-inner {
-    background-color:#F2F1EF;
+    background-color: #F2F1EF;
     color: black;
     overflow-y: auto;
     z-index: 2;
@@ -204,8 +205,25 @@ span {
     flex-direction: column;
     width: 100%;
     text-align: right;
-
     div {
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: none;
+    }
+    .mobile-apology {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .mobile-apology {
+        display: none;
     }
 }

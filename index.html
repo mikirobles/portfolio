@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-EN">
 
 <head>
     <title>Micael Robles</title>
@@ -12,8 +12,6 @@
 
     <link rel="stylesheet" href="css/master.css" />
     <link rel="stylesheet" href="css/fontello.css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito:600|Ubuntu+Mono:400,700|Permanent+Marker" rel="stylesheet">
 </head>
 
 <body>
@@ -28,18 +26,18 @@
         </div>
         <div class="gianttext"><span>ROBLES</span>
             <div class="menu">
-                <a href="mailto:micael.robles@gmail.com"><span class="a left">Contact me</span></a>
+                <a rel="noopener" href="mailto:micael.robles@gmail.com"><span class="a left">Contact me</span></a>
                 <span id="partyBtn" class="a left">Party mode</span>
             </div>
         </div>
         <span class="disclaimer">Front end dev from Buenos Aires, Argentina.
-            <a target="_blank" href="https://github.com/erosilk">
+            <a rel="noopener" target="_blank" href="https://github.com/erosilk">
                 <i class="icon-github"></i>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/micael-robles-75851b140/">
+            <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/micael-robles-75851b140/">
                 <i class="icon-linkedin"></i>
             </a>
-            <a target="_blank" href="https://twitter.com/MicRobles">
+            <a rel="noopener" target="_blank" href="https://twitter.com/MicRobles">
                 <i class="icon-twitter"></i>
             </a>
         </span>
@@ -56,7 +54,7 @@
                     <p>Am I sounding too pretentious? I'm sorry,
                         <strike>I'm just gonna have to fake it till I make it.</strike>
                     </p>
-                    <img src="assets/img/me.jpg" />
+                    <img data-src="assets/img/me.jpg" />
         </div>
         <div class="left-inner portfolio-inner">
             <p class="backbtn">
@@ -67,12 +65,24 @@
 
         </div>
     </div>
+    <div class="mobile-apology">
+        <p>mobile site not ready yet. sorry</p>
+    </div>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/js/anime.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+<script>
+ WebFont.load({
+    google: {
+      families: ['Nunito:600', 'Ubuntu Mono:400,700', 'Permanent Marker']
+    }
+  });
+</script>
 
 </html>
 
