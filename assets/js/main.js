@@ -1,3 +1,4 @@
+
 var aboutItem = ".a.right:first-child";
 var aboutWindow = ".about-inner";
 var portfolioItem = ".a.right:nth-child(2)";
@@ -295,4 +296,3 @@ function discoMode() {
   }
 
 }
-
