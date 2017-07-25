@@ -48,9 +48,9 @@ li {
   align-items: center;
   transition: 0.3s ease all;
   position: relative; }
-  .container .gianttext:first-child {
-    margin-right: 200px; }
   .container .gianttext:nth-child(2) {
+    margin-right: 200px; }
+  .container .gianttext:nth-child(3) {
     margin-left: 200px; }
 
 .dottie {
@@ -83,16 +83,16 @@ li {
 .menu {
   position: absolute; }
 
-.container *:first-child .menu {
+.container .gianttext:nth-child(2) .menu {
   bottom: 0;
   right: 0;
   transform: translateX(120%) translateY(-100%); }
 
-.container *:nth-child(2) .menu {
+.container .gianttext:nth-child(3) .menu {
   bottom: 0;
   left: 0;
   transform: translateX(-120%) translateY(-85%); }
-  .container *:nth-child(2) .menu span:first-child {
+  .container .gianttext:nth-child(3) .menu span:first-child {
     cursor: pointer; }
 
 .menu {
@@ -171,15 +171,47 @@ span {
   .project-main div {
     margin-top: 10px; }
 
-@media screen and (max-width: 800px) {
-  .container {
-    display: none; }
-  .mobile-apology {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; } }
+#mobile-logo {
+  display: none; }
 
-@media screen and (min-width: 800px) {
-  .mobile-apology {
-    display: none; } }
+@media screen and (max-width: 800px) {
+  .gianttext > span:first-child {
+    display: none; }
+  .gianttext {
+    margin: 0; }
+    .gianttext .menu {
+      transform: none;
+      position: relative; }
+  .container * .menu {
+    transform: none !important; }
+  .container .gianttext:nth-child(3) {
+    margin: 0; }
+  .container .gianttext:nth-child(2) {
+    margin: 0; }
+  .left-inner {
+    width: 120vw !important;
+    transform: none; }
+  .dottie {
+    display: none !important; }
+  .portfolio-project {
+    flex-direction: column; }
+    .portfolio-project .description {
+      box-sizing: border-box; }
+    .portfolio-project .project-main {
+      text-align: left;
+      flex-direction: row;
+      margin-bottom: 14px; }
+      .portfolio-project .project-main .project-links {
+        text-align: left; }
+  .project-main div {
+    margin-top: 0; }
+  .menu > * {
+    margin: 11px 0 !important; }
+  .disclaimer {
+    text-align: center;
+    margin-top: 50px; }
+  #partyBtn {
+    display: none; }
+  #mobile-logo {
+    display: block;
+    margin-bottom: 35px; } }
