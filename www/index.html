@@ -317,6 +317,7 @@ span {
   .container .gianttext:nth-child(2) {
     margin: 0; }
   .left-inner {
+    max-width: 600px;
     width: 120vw !important;
     transform: none; }
   .dottie {
@@ -324,7 +325,10 @@ span {
   .portfolio-project {
     flex-direction: column; }
     .portfolio-project .description {
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      margin-left: 0;
+      max-width: 100%;
+      min-width: 100%; }
     .portfolio-project .project-main {
       text-align: left;
       flex-direction: row;
@@ -342,7 +346,11 @@ span {
     display: none; }
   #mobile-logo {
     display: block;
-    margin-bottom: 35px; } }
+    margin-bottom: 35px; }
+  .a.right.selected:first-child {
+    transform: scale(2) translateY(-30%) translateX(10%); }
+  .a.right.selected:nth-child(2) {
+    transform: scale(2) translateY(10%) translateX(5%); } }
 
 
     /* endinject */
@@ -631,6 +639,7 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", 
 
     $(selectedItem).removeClass("selected");
     $("span:not(.selected)").css("filter", "blur(0)");
+    $("#mobile-logo").css("filter", "blur(0)");
     $(".container").css("transform", "scale(1)");
 
     toggleBackBtn();
@@ -691,6 +700,7 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", 
           $(this).addClass("selected");
           $(".container").css("transform", "scale(0.8)");
           $("span:not(.selected)").css("filter", "blur(3px)");
+          $("#mobile-logo").css("filter", "blur(3px)");
 
           selectedItem = item;
           selectedWindow = $window;

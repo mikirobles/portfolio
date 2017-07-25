@@ -236,6 +236,7 @@ span {
         margin: 0;
     }
     .left-inner {
+        max-width: 600px;
         width: 120vw !important;
         transform: none;
     }
@@ -246,6 +247,9 @@ span {
         flex-direction: column;
         .description {
             box-sizing: border-box;
+            margin-left: 0;
+            max-width: 100%;
+            min-width: 100%;
         }
         .project-main {
             text-align: left;
@@ -273,5 +277,10 @@ span {
         display: block;
         margin-bottom: 35px;
     }
+    .a.right.selected:first-child {
+        transform: scale(2) translateY(-30%) translateX(10%);
+    }
+    .a.right.selected:nth-child(2) {
+        transform: scale(2) translateY(10%) translateX(5%)
+    }
 }
-
