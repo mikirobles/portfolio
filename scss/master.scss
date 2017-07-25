@@ -59,10 +59,10 @@ li {
     align-items: center;
     transition: 0.3s ease all;
     position: relative;
-    .gianttext:first-child {
+    .gianttext:nth-child(2) {
         margin-right: 200px;
     }
-    .gianttext:nth-child(2) {
+    .gianttext:nth-child(3) {
         margin-left: 200px;
     }
 }
@@ -103,13 +103,13 @@ li {
     position: absolute;
 }
 
-.container *:first-child .menu {
+.container .gianttext:nth-child(2) .menu {
     bottom: 0;
     right: 0;
     transform: translateX(120%) translateY(-100%);
 }
 
-.container *:nth-child(2) .menu {
+.container .gianttext:nth-child(3) .menu {
     bottom: 0;
     left: 0;
     transform: translateX(-120%) translateY(-85%);
@@ -210,20 +210,68 @@ span {
     }
 }
 
+#mobile-logo {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
-    .container {
+    //mobile
+    .gianttext>span:first-child {
         display: none;
     }
-    .mobile-apology {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .gianttext {
+        margin: 0;
+        .menu {
+            transform: none;
+            position: relative;
+        }
+    }
+    .container * .menu {
+        transform: none !important;
+    }
+    .container .gianttext:nth-child(3) {
+        margin: 0;
+    }
+    .container .gianttext:nth-child(2) {
+        margin: 0;
+    }
+    .left-inner {
+        width: 120vw !important;
+        transform: none;
+    }
+    .dottie {
+        display: none !important;
+    }
+    .portfolio-project {
+        flex-direction: column;
+        .description {
+            box-sizing: border-box;
+        }
+        .project-main {
+            text-align: left;
+            flex-direction: row;
+            margin-bottom: 14px;
+            .project-links {
+                text-align: left;
+            }
+        }
+    }
+    .project-main div {
+        margin-top: 0;
+    }
+    .menu>* {
+        margin: 11px 0 !important;
+    }
+    .disclaimer {
+        text-align: center;
+        margin-top: 50px;
+    }
+    #partyBtn {
+        display: none;
+    }
+    #mobile-logo {
+        display: block;
+        margin-bottom: 35px;
     }
 }
 
-@media screen and (min-width: 800px) {
-    .mobile-apology {
-        display: none;
-    }
-}
