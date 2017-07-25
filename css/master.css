@@ -181,7 +181,8 @@ span {
     margin: 0; }
     .gianttext .menu {
       transform: none;
-      position: relative; }
+      position: relative;
+      text-align: center; }
   .container * .menu {
     transform: none !important; }
   .container .gianttext:nth-child(3) {
