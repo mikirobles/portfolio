@@ -64,6 +64,7 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", 
 
     $(selectedItem).removeClass("selected");
     $("span:not(.selected)").css("filter", "blur(0)");
+    $("#mobile-logo").css("filter", "blur(0)");
     $(".container").css("transform", "scale(1)");
 
     toggleBackBtn();
@@ -124,6 +125,7 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", 
           $(this).addClass("selected");
           $(".container").css("transform", "scale(0.8)");
           $("span:not(.selected)").css("filter", "blur(3px)");
+          $("#mobile-logo").css("filter", "blur(3px)");
 
           selectedItem = item;
           selectedWindow = $window;
