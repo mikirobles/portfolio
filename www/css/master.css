@@ -121,6 +121,7 @@ li {
   cursor: pointer; }
 
 .disclaimer {
+  display: inline-flex;
   font-family: Ubuntu Mono;
   font-size: 19px;
   color: rgba(0, 0, 0, 0.28);
@@ -214,7 +215,10 @@ span {
     margin: 11px 0 !important; }
   .disclaimer {
     text-align: center;
-    margin-top: 50px; }
+    margin-top: 50px;
+    display: block; }
+    .disclaimer .home-links {
+      margin-top: 15px; }
   #partyBtn {
     display: none; }
   #mobile-logo {
