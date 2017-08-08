@@ -31,7 +31,7 @@ loadScript(
         description: 'My first project using <strong>Next.js</strong>!',
         links: [
           {
-            link: 'https://leaderboard-bneujobbvj.now.sh',
+            link: 'https://leaderboard-fvdrrtlmqa.now.sh/',
           },
           {
             github: 'https://github.com/erosilk/camper-leaderboard',
