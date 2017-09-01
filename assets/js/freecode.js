@@ -106,7 +106,7 @@ loadScript(
       {
         name: 'Simon game',
         description:
-          'I love Simon and I also <i>love</i> this game! <br>One of my first big JS challenges for sure.',
+          'Classic Simon game!',
         links: [
           {
             link: 'https://erosilk.github.io/simon-game/',
