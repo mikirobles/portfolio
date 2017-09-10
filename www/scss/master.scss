@@ -158,12 +158,12 @@ li {
 }
 
 .a.right.selected:first-child {
-  transform: scale(2) translateY(-30%) translateX(30%);
+  transform: scale(2) translateY(-30%) translateX(45%);
   margin-left: 20%;
 }
 
 .a.right.selected:nth-child(2) {
-  transform: scale(2) translateY(30%) translateX(30%);
+  transform: scale(2) translateY(30%) translateX(45%);
   margin-left: 20%;
 }
 
@@ -259,6 +259,9 @@ span {
   }
   .container .gianttext:nth-child(2) {
     margin: 0;
+  }
+  .innercontainer {
+    width: 150%;
   }
   .left-inner {
     max-width: 600px;
