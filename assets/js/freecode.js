@@ -1,170 +1,172 @@
 function loadScript(url, callback) {
-  var script = document.createElement('script')
-  script.type = 'text/javascript'
+  var script = document.createElement("script");
+  script.type = "text/javascript";
   if (script.readyState) {
     //IE
     script.onreadystatechange = function() {
-      if (script.readyState === 'loaded' || script.readyState === 'complete') {
-        script.onreadystatechange = null
-        callback()
+      if (script.readyState === "loaded" || script.readyState === "complete") {
+        script.onreadystatechange = null;
+        callback();
       }
-    }
+    };
   } else {
     //Others
     script.onload = function() {
-      callback()
-    }
+      callback();
+    };
   }
 
-  script.src = url
-  document.getElementsByTagName('head')[0].appendChild(script)
+  script.src = url;
+  document.getElementsByTagName("head")[0].appendChild(script);
 }
 
 loadScript(
-  'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js",
   function() {
-    var projectsUl = $('.fcc-projects')[0]
+    var projectsUl = $(".fcc-projects")[0];
 
     var fccProjects = [
       {
-        name: 'Camper Leaderboard',
-        description: 'My first project using <strong>Next.js</strong>!',
+        name: "Camper Leaderboard",
+        description: "My first project using <strong>Next.js</strong>!",
         links: [
           {
-            link: 'https://leaderboard-fvdrrtlmqa.now.sh/',
+            link: "https://leaderboard-bneujobbvj.now.sh"
           },
           {
-            github: 'https://github.com/erosilk/camper-leaderboard',
-          },
-        ],
+            github: "https://github.com/erosilk/camper-leaderboard"
+          }
+        ]
       },
       {
-        name: 'Recipe Box',
+        name: "Recipe Box",
         description:
-          'Keep your recipes in this user friendly app. They will be saved in your localStorage!. <br> <br>Made with <strong>React.</strong>',
+          "Keep your recipes in this user friendly app. They will be saved in your localStorage!. <br> <br>Made with <strong>React.</strong>",
         links: [
           {
-            link: 'https://erosilk.github.io/recipe-box/',
+            link: "https://erosilk.github.io/recipe-box/"
           },
           {
-            github: 'https://github.com/erosilk/recipe-box',
-          },
-        ],
+            github: "https://github.com/erosilk/recipe-box"
+          }
+        ]
       },
       {
-        name: 'Markdown Previewer',
+        name: "Markdown Previewer",
         description:
           "Write your README's in this fast-loading <i>(and featureless)</i> Markdown Previewer!. <br> <br> Made with <b>React.</b>",
         links: [
           {
-            link: 'https://erosilk.github.io/markdown-previewer-build/',
+            link: "https://erosilk.github.io/markdown-previewer-build/"
           },
           {
-            github: 'https://github.com/erosilk/markdown-previewer',
-          },
-        ],
+            github: "https://github.com/erosilk/markdown-previewer"
+          }
+        ]
       },
       {
-        name: 'Wikipedia<br>Viewer',
+        name: "Wikipedia<br>Viewer",
         description:
-          'Blazingly fast Wikipedia searching, with a cool intro animation!',
+          "Blazingly fast Wikipedia searching, with a cool intro animation!",
         links: [
           {
-            link: 'https://erosilk.github.io/wikipedia-viewer/',
+            link: "https://erosilk.github.io/wikipedia-viewer/"
           },
           {
-            github: 'https://github.com/erosilk/wikipedia-viewer',
-          },
-        ],
+            github: "https://github.com/erosilk/wikipedia-viewer"
+          }
+        ]
       },
       {
-        name: 'Tic Tac Toe',
+        name: "Tic Tac Toe",
         description:
           "Play against a friend or my <strike>ultra-superior</strike> self-made AI. It looks good! and it's <i>Guaranteed fun.</i>",
         links: [
           {
-            link: 'https://erosilk.github.io/tic-tac-toe/',
+            link: "https://erosilk.github.io/tic-tac-toe/"
           },
           {
-            github: 'https://github.com/erosilk/tic-tac-toe',
-          },
-        ],
+            github: "https://github.com/erosilk/tic-tac-toe"
+          }
+        ]
       },
       {
-        name: 'Twitch JSON API',
+        name: "Twitch JSON API",
         description:
-          'Check on <strike>your</strike> MY favourite Twitch.tv streamers. <br> There is some <strong>API fetching</strong> involved.',
+          "Check on <strike>your</strike> MY favourite Twitch.tv streamers. <br> There is some <strong>API fetching</strong> involved.",
         links: [
           {
-            link: 'https://erosilk.github.io/twitch-json-api/',
+            link: "https://erosilk.github.io/twitch-json-api/"
           },
           {
-            github: 'https://github.com/erosilk/twitch-json-api',
-          },
-        ],
+            github: "https://github.com/erosilk/twitch-json-api"
+          }
+        ]
       },
       {
-        name: 'Simon game',
+        name: "Simon game",
         description:
-          'Classic Simon game!',
+          "I love Simon and I also <i>love</i> this game! <br>One of my first big JS challenges for sure.",
         links: [
           {
-            link: 'https://erosilk.github.io/simon-game/',
+            link: "https://erosilk.github.io/simon-game/"
           },
           {
-            github: 'https://github.com/erosilk/simon-game',
-          },
-        ],
+            github: "https://github.com/erosilk/simon-game"
+          }
+        ]
       },
       {
-        name: 'Random Quote Machine',
+        name: "Random Quote Machine",
         description:
-          'One of my first web-app challenges, and unfortunaly probably the best looking of them all. Get some motivation.',
+          "One of my first web-app challenges, and unfortunaly probably the best looking of them all. Get some motivation.",
         links: [
           {
-            link: 'https://erosilk.github.io/random-quote-machine/',
+            link: "https://erosilk.github.io/random-quote-machine/"
           },
           {
-            github: 'https://github.com/erosilk/random-quote-machine',
-          },
-        ],
+            github: "https://github.com/erosilk/random-quote-machine"
+          }
+        ]
       },
       {
-        name: 'Local Weather',
+        name: "Local Weather",
         description:
           "Looks good and it's even got some bouncy animations! What more could you expect?",
         links: [
           {
-            link: 'https://erosilk.github.io/local-weather/',
+            link: "https://erosilk.github.io/local-weather/"
           },
           {
-            github: 'https://github.com/erosilk/local-weather',
-          },
-        ],
-      },
-    ]
+            github: "https://github.com/erosilk/local-weather"
+          }
+        ]
+      }
+    ];
 
-    fccProjects.forEach(el => {
-      var links = ''
+    if (fccProjects) {
+      fccProjects.forEach(el => {
+        var links = "";
 
-      el.links.forEach(obj => {
-        let key = Object.keys(obj)[0]
-        links +=
-          '<a rel="noopener" target="_blank" href="' +
-          obj[key] +
-          '"><i class="icon-' +
-          key +
-          '"></i></a>'
-      })
+        el.links.forEach(obj => {
+          let key = Object.keys(obj)[0];
+          links +=
+            '<a rel="noopener" target="_blank" href="' +
+            obj[key] +
+            '"><i class="icon-' +
+            key +
+            '"></i></a>';
+        });
 
-      projectsUl.innerHTML +=
-        '<li class="fcc-item"><div class="fcc-itemhead"><p class="fcc-title">' +
-        el.name +
-        '<div class="project-links">' +
-        links +
-        '</div></div><p class="fcc-description">' +
-        el.description +
-        '</div></div></li>'
-    })
+        projectsUl.innerHTML +=
+          '<li class="fcc-item"><div class="fcc-itemhead"><p class="fcc-title">' +
+          el.name +
+          '<div class="project-links">' +
+          links +
+          '</div></div><p class="fcc-description">' +
+          el.description +
+          "</div></div></li>";
+      });
+    }
   }
-)
+);
