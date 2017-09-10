@@ -98,6 +98,7 @@ loadScript(
 
     function showInner(item, $window, bodyColor, animLength) {
       $(".dottiecontainer").css("display", "flex");
+      $(".disclaimer").css("z-index", "-1");
 
       showInnerTO = setTimeout(function() {
         $($window)
@@ -120,6 +121,7 @@ loadScript(
         .parent()
         .css("display", "none");
       $(".dottiecontainer").css("display", "none");
+      $(".disclaimer").css("z-index", "initial");
 
       $($window).css("display", "none");
       $("body").css("background-color", "white");
