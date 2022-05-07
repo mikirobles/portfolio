@@ -1,6 +1,4 @@
-# My personal website
-
-Check it out here: http://www.micaelrobles.com/
+# My (old) personal website
 
 Build with:
 ```
